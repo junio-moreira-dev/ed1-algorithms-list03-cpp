@@ -1,5 +1,5 @@
 //
-// Created by Junio on 2026-08-27.
+// Created by Junio Moreira on 2026-08-27.
 //
 
 #include <iostream>
@@ -19,11 +19,8 @@ public:
 };
 
 int main() {
-    // Fast I/O
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-
     // TODO: Instantiate Solution and test with sample vectors
+    Solution solution;
 
     return 0;
 }
