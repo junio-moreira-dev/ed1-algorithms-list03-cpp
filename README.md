@@ -13,8 +13,6 @@ Practice exercises for **Data Structures I** — Static (sequential) list operat
 
 ```
 ed1-static-lists-list03-cpp/
-├── External Libraries
-├── Scratches and Consoles
 └── src/
     ├── Exer01_SortedInsertStaticList.cpp
     ├── Exer02_RemoveElementByValue.cpp
@@ -23,7 +21,9 @@ ed1-static-lists-list03-cpp/
 ├── .gitignore
 ├── CMakeLists.txt
 ├── main.cpp
-└── README.md
+├── README.md
+├── External Libraries
+└──Scratches and Consoles
 ```
 
 > `External Libraries` and `Scratches and Consoles` are CLion/IntelliJ-generated project-view entries (not real folders tracked in the repo) — they show up automatically in the IDE sidebar and can be ignored when browsing the source on disk.
