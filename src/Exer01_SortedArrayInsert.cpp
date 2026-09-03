@@ -12,7 +12,6 @@ using ll = long long;
 class Solution {
 public:
     vector<ll> searchInsertAndShift(const vector<ll>& nums, ll target) {
-        int n = nums.size();
 
         return {};
     }
