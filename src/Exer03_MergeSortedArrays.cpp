@@ -11,7 +11,7 @@ using ll = long long;
 
 class Solution {
 public:
-    vector<ll> mergeSortedArrays(const vector<ll>& nums1, const vector<ll>& nums2) {
+    static vector<ll> mergeSortedArrays(const vector<ll>& nums1, const vector<ll>& nums2) {
         int n = nums1.size();
         int m = nums2.size();
         vector<ll> result(n + m);

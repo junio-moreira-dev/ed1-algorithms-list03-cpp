@@ -11,26 +11,31 @@ using ll = long long;
 
 class Solution {
 public:
-    vector<ll> pivotArray(const vector<ll>& nums, ll pivot) {
-        vector<ll> less;
-        vector<ll> equal;
-        vector<ll> greater;
+    static vector<ll> pivotArray(const vector<ll>& nums, ll pivot) {
+        int n = nums.size();
+        vector<ll> result(n);
+        int k = 0;
 
-        for (ll x : nums) {
-            if (x < pivot) {
-                less.push_back(x);
-            } else if (x == pivot) {
-                equal.push_back(x);
-            } else {
-                greater.push_back(x);
+        // 1ª passada: menores que o pivô
+        for (int i = 0; i < n; ++i) {
+            if (nums[i] < pivot) {
+                result[k++] = nums[i];
             }
         }
 
-        vector<ll> result;
-        result.reserve(nums.size());
-        result.insert(result.end(), less.begin(), less.end());
-        result.insert(result.end(), equal.begin(), equal.end());
-        result.insert(result.end(), greater.begin(), greater.end());
+        // 2ª passada: iguais ao pivô
+        for (int i = 0; i < n; ++i) {
+            if (nums[i] == pivot) {
+                result[k++] = nums[i];
+            }
+        }
+
+        // 3ª passada: maiores que o pivô
+        for (int i = 0; i < n; ++i) {
+            if (nums[i] > pivot) {
+                result[k++] = nums[i];
+            }
+        }
 
         return result;
     }
