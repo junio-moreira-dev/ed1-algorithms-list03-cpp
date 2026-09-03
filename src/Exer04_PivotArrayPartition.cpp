@@ -12,32 +12,8 @@ using ll = long long;
 class Solution {
 public:
     static vector<ll> pivotArray(const vector<ll>& nums, ll pivot) {
-        int n = nums.size();
-        vector<ll> result(n);
-        int k = 0;
 
-        // 1ª passada: menores que o pivô
-        for (int i = 0; i < n; ++i) {
-            if (nums[i] < pivot) {
-                result[k++] = nums[i];
-            }
-        }
-
-        // 2ª passada: iguais ao pivô
-        for (int i = 0; i < n; ++i) {
-            if (nums[i] == pivot) {
-                result[k++] = nums[i];
-            }
-        }
-
-        // 3ª passada: maiores que o pivô
-        for (int i = 0; i < n; ++i) {
-            if (nums[i] > pivot) {
-                result[k++] = nums[i];
-            }
-        }
-
-        return result;
+        return {};
     }
 };
 

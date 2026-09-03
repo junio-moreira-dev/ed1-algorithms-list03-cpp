@@ -12,26 +12,8 @@ using ll = long long;
 class Solution {
 public:
     static vector<ll> mergeSortedArrays(const vector<ll>& nums1, const vector<ll>& nums2) {
-        int n = nums1.size();
-        int m = nums2.size();
-        vector<ll> result(n + m);
 
-        int i = 0, j = 0, k = 0;
-
-        // Compara e intercala enquanto ambos tiverem elementos
-        while (i < n && j < m) {
-            if (nums1[i] <= nums2[j]) {
-                result[k++] = nums1[i++];
-            } else {
-                result[k++] = nums2[j++];
-            }
-        }
-
-        // Despeja os elementos restantes (apenas um desses laços executará)
-        while (i < n) result[k++] = nums1[i++];
-        while (j < m) result[k++] = nums2[j++];
-
-        return result;
+        return {};
     }
 };
 
