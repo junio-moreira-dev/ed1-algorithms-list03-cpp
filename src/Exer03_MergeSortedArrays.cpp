@@ -17,6 +17,8 @@ public:
         vector<ll> result(n + m);
 
         int i = 0, j = 0, k = 0;
+
+        // Compara e intercala enquanto ambos tiverem elementos
         while (i < n && j < m) {
             if (nums1[i] <= nums2[j]) {
                 result[k++] = nums1[i++];
@@ -24,6 +26,8 @@ public:
                 result[k++] = nums2[j++];
             }
         }
+
+        // Despeja os elementos restantes (apenas um desses laços executará)
         while (i < n) result[k++] = nums1[i++];
         while (j < m) result[k++] = nums2[j++];
 

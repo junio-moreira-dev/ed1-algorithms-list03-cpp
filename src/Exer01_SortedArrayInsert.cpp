@@ -15,6 +15,7 @@ public:
         int n = nums.size();
         vector<ll> result(n + 1);
 
+        // 1. Encontra a posição de inserção
         int pos = n;
         for (int i = 0; i < n; ++i) {
             if (target < nums[i]) {
@@ -23,10 +24,15 @@ public:
             }
         }
 
+        // Etapa A: copia os menores que x (de 0 até pos - 1)
         for (int i = 0; i < pos; ++i) {
             result[i] = nums[i];
         }
+
+        // Etapa B: insere x exatamente em 'pos'
         result[pos] = target;
+
+        // Etapa C: copia os maiores que x para as posições à frente (shift +1)
         for (int i = pos; i < n; ++i) {
             result[i + 1] = nums[i];
         }
